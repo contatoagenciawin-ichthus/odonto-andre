@@ -26,7 +26,7 @@ export default function Home() {
         <article className="region-card light"><span className="pill">CACONDE · SP</span><h3>Odontologia geral com atenção a você.</h3><p>Cuidados odontológicos para diferentes necessidades, com orientação clara e uma avaliação individualizada.</p><Link href="/caconde/odontologia-geral">Conheça o atendimento em Caconde <span aria-hidden="true">→</span></Link></article>
       </div>
     </section>
-    <section className="closing-panel"><span className="eyebrow">CONTATO E AGENDAMENTO</span><h2>O primeiro passo é uma boa conversa.</h2><p>Os canais de contato e agendamento serão ativados após confirmação dos dados e implantação do fluxo seguro de captação.</p><span className="pill">Prévia sem formulário ativo</span></section>
+    <section className="closing-panel"><span className="eyebrow">CONTATO E AGENDAMENTO</span><h2>O primeiro passo é uma boa conversa.</h2><p>Entre em contato pelo WhatsApp para conhecer a disponibilidade de atendimento em Americana ou Caconde. O local é informado durante o agendamento.</p><a className="btn" target="_blank" rel="noopener noreferrer" href="https://wa.me/5519983155303?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20odontol%C3%B3gico%20com%20o%20Dr.%20Andr%C3%A9%20%C3%81vila.">Conversar pelo WhatsApp</a></section>
     <SiteFooter />
   </main>;
 }

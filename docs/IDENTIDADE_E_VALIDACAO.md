@@ -34,3 +34,13 @@ O componente Brand contém um **placeholder identificado como tal**. Substituir 
 
 ## Operação técnica
 Nenhum GitHub Actions deve ser configurado. Desenvolvimento e build locais; deploy Vercel quando autorizado. Evitar ativar serviços pagos durante validação do layout.
+
+
+## Atualização 30/10/2026 — materiais recebidos e operação
+- Recebido `andre_fotos.zip` com 18 arquivos: `logo.png`, `logo 2.png`, retratos `andre1.png` a `andre10.png`, `autoral1.png` a `autoral3.png`, `resultado1.png` a `resultado3.png`.
+- Os dois logos possuem transparência e devem ser incorporados a partir dos arquivos originais, sem redesenho. As fotos de André são materiais reais fornecidos pelo contratante.
+- Fotos de pacientes/resultados e próteses não devem ser publicadas até comprovar permissões e conformidade com normas de publicidade odontológica.
+- Locais de atendimento em Americana e Caconde são consultórios locados por período, sem endereços estáveis; não divulgar mapas, endereços fixos ou afirmar consultório próprio. Endereço e horário serão informados durante agendamento via WhatsApp.
+- CRO, especialidades e qualificações continuam aguardando confirmação.
+- Número usado provisoriamente para botão WhatsApp: +55 19 98315-5303 (informado anteriormente no projeto). Validar antes da publicação definitiva.
+- No momento, contato por link direto ao WhatsApp, com mensagem regional predefinida; não há formulário ou CRM conectado.

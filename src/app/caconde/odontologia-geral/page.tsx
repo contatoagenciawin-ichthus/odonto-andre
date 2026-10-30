@@ -1,3 +1,4 @@
+export const metadata = { title: "Odontologia geral em Caconde | André Ávila", description: "Conheça o atendimento odontológico geral de André Ávila em Caconde. Informações sobre disponibilidade e agendamento pelo WhatsApp." };
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/SiteShell";
 export default function Caconde(){

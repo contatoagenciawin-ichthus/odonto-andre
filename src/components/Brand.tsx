@@ -1,0 +1,1 @@
+export function Brand({inverse=false}:{inverse?:boolean}) { return <div className={`brand ${inverse?"brand-inverse":""}`} aria-label="André Ávila, cirurgião-dentista"><div className="brand-placeholder" aria-hidden="true">a<span>·</span></div><div><strong>André Ávila</strong><small>ODONTOLOGIA</small></div></div> }

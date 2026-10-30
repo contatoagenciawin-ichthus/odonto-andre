@@ -1,3 +1,4 @@
+export const metadata = { title: "Próteses dentárias em Americana | André Ávila", description: "Informações sobre próteses dentárias e reabilitação oral com André Ávila em Americana. Atendimento mediante agendamento." };
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/SiteShell";
 export default function Americana(){

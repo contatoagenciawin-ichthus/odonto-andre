@@ -1,3 +1,4 @@
+import { Portrait } from "@/components/Portrait";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/SiteShell";
 
@@ -12,9 +13,7 @@ export default function Home() {
         <div className="actions"><Link className="btn" href="#atendimento">Conheça os atendimentos</Link><Link className="outline-btn" href="#sobre">Sobre André</Link></div>
         <p className="prototype-disclaimer">Protótipo editorial: informações profissionais, imagens e chamadas finais precisam de aprovação.</p>
       </div>
-      <div className="portrait-placeholder" role="img" aria-label="Espaço reservado para fotografia real do André Ávila">
-        <span>FOTOGRAFIA REAL DO ANDRÉ</span><small>Área reservada para imagem autorizada</small>
-      </div>
+      <Portrait/>
     </section>
     <section id="sobre" className="content-split">
       <div><span className="eyebrow">CONHEÇA O PROFISSIONAL</span><h2>Uma trajetória dedicada ao cuidado odontológico.</h2></div>

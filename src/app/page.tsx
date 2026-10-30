@@ -1,3 +1,4 @@
+export const metadata = { title: "André Ávila | Atendimento odontológico em Americana e Caconde", description: "Conheça a proposta de atendimento odontológico de André Ávila em Americana e Caconde. Informações e agendamentos pelo WhatsApp." };
 import { Portrait } from "@/components/Portrait";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/SiteShell";

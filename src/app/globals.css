@@ -34,3 +34,20 @@
 @media(max-width:900px){.steps-grid{grid-template-columns:repeat(2,1fr)}.editorial-story-copy{padding:40px 30px 40px 0}}
 @media(max-width:720px){.portrait-headshot{transform:scale(1.35)}.editorial-story{grid-template-columns:1fr}.editorial-story-image{min-height:330px}.editorial-story-copy{padding:0 26px 35px}.steps-grid{grid-template-columns:1fr 1fr}.enhanced-hero{padding-top:52px}}
 @media(max-width:480px){.steps-grid{grid-template-columns:1fr}.hero-trust{flex-direction:column}}
+
+
+/* Lead capture funnel */
+.lead-section{display:grid;grid-template-columns:1fr 1fr;gap:clamp(25px,5vw,90px);align-items:center;background:#edf4f5;border-radius:12px;padding:clamp(30px,5vw,70px);margin:45px 0 80px}
+.lead-section h2{font-size:clamp(32px,3.5vw,52px);line-height:1.16;letter-spacing:-.045em;color:var(--navy);margin:0 0 20px}
+.lead-section-copy p{font-size:16px;line-height:1.8;color:#526977}
+.lead-section-form{background:white;padding:30px;border-radius:10px;box-shadow:0 8px 30px #102e5210}
+.lead-form{display:flex;flex-direction:column;gap:15px}
+.lead-form label:not(.lead-check){display:block;font-size:13px;font-weight:700;color:var(--navy)}
+.lead-form input:not([type="checkbox"]),.lead-form select{width:100%;display:block;margin-top:7px;border-radius:6px;border:1px solid #c8d6dd;padding:13px;font-size:15px;background:#fff;color:var(--navy)}
+.lead-check{display:flex;gap:10px;align-items:flex-start;font-size:12px;line-height:1.5;color:#536674}
+.lead-check input{margin:2px 0 0;flex-shrink:0}
+.lead-form button:disabled{opacity:.55;cursor:wait}
+.lead-help{font-size:11px;line-height:1.55;color:#687d89;margin:0}
+.lead-direct{font-size:12px;line-height:1.5;text-decoration:underline;color:var(--blue)}
+.lead-disabled p{font-size:14px;color:#617985;line-height:1.7}
+@media(max-width:800px){.lead-section{grid-template-columns:1fr}.lead-section-form{padding:22px}}

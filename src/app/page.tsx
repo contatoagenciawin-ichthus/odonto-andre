@@ -1,32 +1,48 @@
-export const metadata = { title: "André Ávila | Atendimento odontológico em Americana e Caconde", description: "Conheça a proposta de atendimento odontológico de André Ávila em Americana e Caconde. Informações e agendamentos pelo WhatsApp." };
-import { Portrait } from "@/components/Portrait";
 import Link from "next/link";
+import Image from "next/image";
+import { Portrait } from "@/components/Portrait";
 import { SiteHeader, SiteFooter } from "@/components/SiteShell";
 
-export default function Home() {
-  return <main className="site-layout">
-    <SiteHeader />
-    <section className="site-hero">
-      <div className="site-hero-content">
-        <span className="eyebrow">ANDRÉ ÁVILA · ODONTOLOGIA</span>
-        <h1>Experiência para cuidar do seu sorriso, em cada etapa.</h1>
-        <p>Atendimento odontológico com atenção individualizada, planejamento e uma conversa clara sobre as possibilidades para sua saúde bucal.</p>
-        <div className="actions"><Link className="btn" href="#atendimento">Conheça os atendimentos</Link><Link className="outline-btn" href="#sobre">Sobre André</Link></div>
-        <p className="prototype-disclaimer">Protótipo editorial: informações profissionais, imagens e chamadas finais precisam de aprovação.</p>
-      </div>
-      <Portrait/>
-    </section>
-    <section id="sobre" className="content-split">
-      <div><span className="eyebrow">CONHEÇA O PROFISSIONAL</span><h2>Uma trajetória dedicada ao cuidado odontológico.</h2></div>
-      <div><p>André Ávila reúne experiência clínica e uma proposta de atendimento orientada por escuta, avaliação individual e explicações acessíveis. Nesta seção entraremos com sua trajetória completa e as credenciais verificadas.</p><Link href="/design-system" className="text-link">Conheça a identidade do projeto <span aria-hidden="true">↗</span></Link></div>
-    </section>
-    <section id="atendimento" className="care-section"><div className="section-heading"><span>ATENDIMENTO EM DUAS CIDADES</span><h2>Encontre a jornada mais adequada para você.</h2></div>
-      <div className="region-grid">
-        <article className="region-card"><span className="pill">AMERICANA · SP</span><h3>Próteses dentárias e reabilitação oral.</h3><p>Um olhar dedicado às necessidades de quem busca alternativas para recuperar a função e o conforto do sorriso.</p><Link href="/americana/proteses-dentarias">Conheça o atendimento em Americana <span aria-hidden="true">→</span></Link></article>
-        <article className="region-card light"><span className="pill">CACONDE · SP</span><h3>Odontologia geral com atenção a você.</h3><p>Cuidados odontológicos para diferentes necessidades, com orientação clara e uma avaliação individualizada.</p><Link href="/caconde/odontologia-geral">Conheça o atendimento em Caconde <span aria-hidden="true">→</span></Link></article>
-      </div>
-    </section>
-    <section className="closing-panel"><span className="eyebrow">CONTATO E AGENDAMENTO</span><h2>O primeiro passo é uma boa conversa.</h2><p>Entre em contato pelo WhatsApp para conhecer a disponibilidade de atendimento em Americana ou Caconde. O local é informado durante o agendamento.</p><a className="btn" target="_blank" rel="noopener noreferrer" href="https://wa.me/5519983155303?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20odontol%C3%B3gico%20com%20o%20Dr.%20Andr%C3%A9%20%C3%81vila.">Conversar pelo WhatsApp</a></section>
-    <SiteFooter />
-  </main>;
+export const metadata = {
+ title: "André Ávila | Próteses em Americana e odontologia em Caconde",
+ description: "Conheça o atendimento de André Ávila: próteses dentárias e reabilitação oral em Americana; odontologia geral em Caconde. Avaliação individual e contato pelo WhatsApp.",
+};
+const phone="5519983155303";
+function whatsApp(message:string){return "https://wa.me/"+phone+"?text="+encodeURIComponent(message)}
+const questions=[
+ ["Quando uma prótese dentária pode ser indicada?","Quando há perda de dentes ou necessidade de recuperar mastigação, função ou estética, o dentista pode avaliar diferentes modalidades de prótese. A indicação depende do exame clínico e, quando necessário, de exames complementares."],
+ ["Prótese protocolo e dentadura são a mesma coisa?","Não. A prótese protocolo é uma modalidade de reabilitação geralmente fixada sobre implantes; a prótese total convencional é removível. A avaliação determina as alternativas adequadas para cada caso."],
+ ["É possível concluir um tratamento em 72 horas?","Em determinadas situações e conforme o planejamento clínico, algumas etapas de reabilitação podem ser realizadas em prazo reduzido, eventualmente em até 72 horas. Isso não se aplica a todos os pacientes nem significa que todas as etapas do tratamento se encerram nesse período. A viabilidade depende de avaliação presencial, exames e condições clínicas."],
+ ["Preciso saber qual tratamento quero antes de conversar?","Não. Você pode explicar sua dificuldade ou objetivo no WhatsApp. O atendimento orienta os próximos passos; a escolha da técnica é feita após avaliação profissional."],
+ ["Onde são realizados os atendimentos?","André atende mediante agendamento em Americana e Caconde. O endereço e a disponibilidade são informados diretamente pelo WhatsApp durante a organização da consulta."],
+ ["Posso começar com um atendimento remoto?","Você pode iniciar o contato e esclarecer dúvidas administrativas à distância. Quando indicada e permitida, uma modalidade de teleodontologia pode fazer parte do cuidado profissional. Exames e etapas presenciais continuam necessários conforme cada caso."]
+];
+export default function Home(){
+return <main className="site-layout">
+<SiteHeader/>
+<section className="site-hero enhanced-hero">
+ <div className="site-hero-content"><span className="eyebrow">ANDRÉ ÁVILA · ODONTOLOGIA EM AMERICANA E CACONDE</span>
+ <h1>Voltar a mastigar com confiança começa com um bom planejamento.</h1>
+ <p>Próteses dentárias e reabilitação oral em Americana. Atendimento odontológico geral em Caconde. Entenda suas opções com orientação individualizada, clareza e atenção à sua rotina.</p>
+ <div className="actions"><a className="btn" href={whatsApp("Olá, quero saber mais sobre uma avaliação odontológica com André Ávila.")} target="_blank" rel="noopener noreferrer">Conversar pelo WhatsApp</a><Link className="outline-btn" href="#atendimento">Veja como André atende</Link></div>
+ <div className="hero-trust"><span>Atendimento em duas cidades</span><span>Planejamento individualizado</span><span>Contato direto pelo WhatsApp</span></div></div>
+ <Portrait/>
+</section>
+<section className="content-split feature-intro" id="sobre"><div><span className="eyebrow">SOBRE ANDRÉ ÁVILA</span><h2>Uma trajetória na odontologia, com atenção ao que importa para cada paciente.</h2></div><div><p>André Ávila atua na odontologia há aproximadamente 25 anos, com experiência em tratamentos de reabilitação oral. Seu atendimento parte de uma conversa cuidadosa, da compreensão das necessidades de cada pessoa e de um planejamento construído a partir da avaliação clínica.</p><p>Mais do que escolher um procedimento, é importante compreender as possibilidades, as limitações e os próximos passos antes de iniciar o tratamento.</p><a className="text-link" href={whatsApp("Olá, gostaria de conhecer o atendimento do André Ávila.")} target="_blank" rel="noopener noreferrer">Fale diretamente com a equipe →</a></div></section>
+<section id="atendimento" className="care-section"><div className="section-heading"><span>ATENDIMENTO POR REGIÃO</span><h2>O cuidado que você procura, na cidade certa.</h2></div><div className="region-grid">
+<article className="region-card"><span className="pill">AMERICANA · SP</span><h3>Próteses dentárias e reabilitação oral.</h3><p>Para quem perdeu dentes, convive com próteses desconfortáveis ou quer conhecer alternativas para recuperar função e mastigação.</p><Link href="/americana/proteses-dentarias">Entenda as opções de reabilitação →</Link></article>
+<article className="region-card light"><span className="pill">CACONDE · SP</span><h3>Atendimento odontológico geral.</h3><p>Para dúvidas, avaliações de saúde bucal e diferentes necessidades odontológicas, com orientação sobre os cuidados e os tratamentos disponíveis.</p><Link href="/caconde/odontologia-geral">Conheça o atendimento em Caconde →</Link></article>
+</div></section>
+<section className="editorial-story"><div className="editorial-story-image"><Image src="/images/andre-consultorio.webp" alt="André Ávila em fotografia profissional de seu acervo" fill sizes="(max-width: 800px) 90vw, 40vw" style={{objectFit:"cover"}}/></div><div className="editorial-story-copy"><span className="eyebrow">REABILITAÇÃO ORAL</span><h2>Prótese não é apenas uma questão estética.</h2><p>A ausência de dentes pode afetar a mastigação, a fala e o conforto em situações cotidianas. Existem diferentes soluções, incluindo próteses removíveis e opções apoiadas sobre implantes.</p><p>O que funciona melhor para uma pessoa pode não ser indicado para outra. A escolha depende de exames, condições da boca, expectativas e planejamento.</p><Link className="outline-btn" href="/americana/proteses-dentarias">Saiba mais sobre próteses</Link></div></section>
+<section className="care-section"><div className="section-heading"><span>COMO FUNCIONA</span><h2>Da primeira conversa ao plano de cuidado.</h2></div><div className="steps-grid">{[
+["01","Contato inicial","Conte o que precisa e informe a cidade de preferência. A equipe orienta o agendamento."],
+["02","Avaliação profissional","André avalia a situação clínica e identifica os exames ou informações necessários."],
+["03","Planejamento","Você recebe orientações sobre alternativas, etapas e prazos possíveis para o seu caso."],
+["04","Acompanhamento","O andamento do atendimento é conduzido conforme o plano definido e a evolução clínica."]
+].map(([step,title,desc])=><article className="step-card" key={step}><b>{step}</b><h3>{title}</h3><p>{desc}</p></article>)}</div></section>
+<section className="time-note"><span className="eyebrow">PRAZOS DE REABILITAÇÃO</span><h2>Alguns casos podem ter etapas concluídas em até 72 horas.</h2><p>Em situações selecionadas, técnicas e condições clínicas podem permitir etapas mais rápidas. Isso exige avaliação, exames e indicação apropriada. O prazo não é garantido e não representa a conclusão integral de todos os tratamentos.</p><a href={whatsApp("Olá, gostaria de entender os prazos possíveis para uma reabilitação oral.")} className="outline-btn" target="_blank" rel="noopener noreferrer">Tire dúvidas sobre os prazos</a></section>
+<section className="care-section faq-section" id="duvidas"><div className="section-heading"><span>PERGUNTAS FREQUENTES</span><h2>Informação também faz parte de um bom atendimento.</h2></div><div className="faq-list">{questions.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div></section>
+<section className="closing-panel"><span className="eyebrow">AMERICANA E CACONDE</span><h2>Converse sobre o que você precisa.</h2><p>O primeiro contato é feito pelo WhatsApp. Lá você pode esclarecer dúvidas de agendamento e receber informações sobre a disponibilidade e o local do atendimento na cidade escolhida.</p><a className="btn" href={whatsApp("Olá, gostaria de agendar uma avaliação com André Ávila. Minha cidade é: ")} target="_blank" rel="noopener noreferrer">Iniciar conversa pelo WhatsApp</a></section>
+<SiteFooter/>
+</main>
 }

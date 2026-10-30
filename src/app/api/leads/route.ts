@@ -3,6 +3,7 @@ import { saveLead } from "@/lib/leads";
 export const runtime="nodejs";
 function json(body:unknown,status:number){return NextResponse.json(body,{status,headers:{"Cache-Control":"no-store"}})}
 export async function POST(request:NextRequest){
+ if(process.env.LEAD_CAPTURE_ENABLED!=="true") return json({error:"Captação temporariamente indisponível"},503);
  const type=request.headers.get("content-type")||"";
  if(!type.includes("application/json")) return json({error:"Tipo de conteúdo inválido"},415);
  const origin=request.headers.get("origin");

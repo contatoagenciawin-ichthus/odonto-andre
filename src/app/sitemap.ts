@@ -1,2 +1,2 @@
-import type {MetadataRoute} from "next";import {articles} from "@/content/articles";
-export default function sitemap():MetadataRoute.Sitemap{const base="https://odonto-andre.vercel.app";return ["/","/americana/proteses-dentarias","/caconde/odontologia-geral","/artigos",...articles.map(a=>"/artigos/"+a.slug)].map(path=>({url:base+path,changeFrequency:path==="/"?"monthly":"yearly",priority:path==="/" ? 1 : .7}))}
+import type {MetadataRoute} from "next";import {publishedArticles} from "@/content/editorial";
+export default function sitemap():MetadataRoute.Sitemap{const base=(process.env.NEXT_PUBLIC_SITE_URL||"https://odonto-andre.vercel.app").replace(/\/$/,"");return ["/","/americana/proteses-dentarias","/caconde/odontologia-geral","/artigos",...publishedArticles().map(a=>"/artigos/"+a.slug)].map(path=>({url:base+path,changeFrequency:"monthly",priority:path==="/" ? 1 : .7}))}

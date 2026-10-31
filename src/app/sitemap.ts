@@ -1,0 +1,2 @@
+import type {MetadataRoute} from "next";import {articles} from "@/content/articles";
+export default function sitemap():MetadataRoute.Sitemap{const base="https://odonto-andre.vercel.app";return ["/","/americana/proteses-dentarias","/caconde/odontologia-geral","/artigos",...articles.map(a=>"/artigos/"+a.slug)].map(path=>({url:base+path,changeFrequency:path==="/"?"monthly":"yearly",priority:path==="/" ? 1 : .7}))}
